@@ -1,0 +1,20 @@
+<div id="app">
+   <p>{{ mensagem }}</p>
+   <button @click="inverterTexto">Inverter Texto</button>
+ </div>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+ <script>
+   Vue.createApp({
+     data() {
+       return {
+         mensagem: "Olá, Vue!"
+       };
+     },
+     methods: {
+       inverterTexto() {
+         this.mensagem = this.mensagem.split('').reverse().join('');
+       }
+     }
+   }).mount("#app");
+ </script>
